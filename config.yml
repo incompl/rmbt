@@ -1,0 +1,103 @@
+# Configuration file for RMBT.
+
+# --------------------------------------------------------------------------------
+# DEBUG SETTINGS
+
+# Show debug messages when loading the page.
+# true | false
+debug: false
+
+# --------------------------------------------------------------------------------
+# DATABASE SETTINGS
+
+# Database host name
+dbHost: localhost
+
+# Database user name
+dbUser: changeme
+
+# Database password
+dbPassword: changeme
+
+# Database name
+dbName: RMBT
+
+# Database table for rooms
+dbRoomsTable: rooms
+
+# Database table for room change history
+dbRoomChangesTable: room_changes
+
+# Database table for links between rooms
+dbLinksTable: links
+
+# Database table for groups of rooms
+dbAreasTable: areas
+
+# Database table for users
+dbUsersTable: users
+
+# --------------------------------------------------------------------------------
+# DISPLAY DEFAULTS
+
+# Default size of the displayed box for a room, in pixels
+defaultRoomSize: 25
+
+# Default width and height of the map, in number of rooms
+defaultMapSize: 20
+
+# Default starting X coordinate for shown rooms
+defaultStartX: 0
+
+# Default starting Y coordinate for shown rooms
+defaultStartY: 0
+
+# Default Z coordinate for shown rooms
+defaultZ: 0
+
+# Default P cordinate for shown rooms
+defaultP: 1
+
+# By default, use "Show Rooms Above" option
+# true | false
+defaultShowAbove: false
+
+# By default, use "Show Rooms Below" option
+# true | false
+defaultShowBelow: false
+
+# By default, use "Show Undescribed" option
+# true | false
+defaultShowUndescribede: false
+
+# --------------------------------------------------------------------------------
+# FIELD SETTINGS
+
+# Room fields that are not shown in the edit tab.
+# list of strings
+hiddenFields:
+  - id
+  - size
+  - x
+  - "y" # y has special meaning in yaml, but quotes clarify that its a string
+  - z
+  - plane_id
+  - lastModified
+  - creator
+  - whenCreated
+
+# Fields that are represented by an HTML form field other than one-line text input.
+# list of mappings from string to (text_big | checkbox | text_small)
+specialFields:
+  description: text_big
+  indoors: checkbox
+  road: checkbox
+  falling: checkbox
+
+# Fields on an exit between rooms.
+# list of string to (label to string, inputType to (text | checkbox), dbField to String)
+dirFields:
+  isDoor:
+    label    : Is a Door
+    inputType: checkbox
+    dbField  : door

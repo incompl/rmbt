@@ -1,0 +1,95 @@
+.up {
+	color: red;
+	font-weight: bold;
+}
+
+.down {
+	color: blue;
+	font-weight: bold;
+}
+
+.tab,.selectedTab {
+	padding: 0px 3px;
+}
+
+.tab {
+	
+}
+
+.selectedTab {
+	background-color: #DDDDDD;
+	border-right: solid black 1px;
+}
+
+#dashboard {
+	float: right;
+        width: 300px;
+        background-color: #DDDDDD;
+}
+
+.adjacent {
+	position: absolute;
+	height: 5px;
+	width: 5px;
+}
+
+.selectedRoom,.room {
+	position: absolute;
+	font-size: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	white-space: nowrap;
+	background-color: #00ddee;
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#room_indoors {
+	background-color: #BDBDBD;
+}
+
+#room_falling {
+	background-color: #A7E9EA;
+}
+
+#room_road {
+	background-color: #EEBB88;
+}
+
+.selectedRoom {
+	color: red;
+	font-weight: bold;
+}
+
+.nonRoom,.selectedNonRoom {
+	position: absolute;
+	display: none;
+	cursor: pointer;
+	border: dotted gray 1px;
+}
+
+.nonRoom {
+	background-color: transparent;
+}
+
+.selectedNonRoom {
+	background-color: gray;
+}
+
+.selected {
+	color: red;
+}
+
+.notSelected {
+	color: black;
+}
+
+textarea {
+	width: 290px;
+	height: 200px;
+}
+
+input.checkbox {
+	display: none;
+}
